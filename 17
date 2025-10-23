@@ -1,0 +1,19 @@
+file = open('17.txt')
+f = list(map(int, file.readlines()))
+m = 100001
+for i in f:
+    if i > 0 and i % 100 == 97 and i < m:
+        m = i
+c = 0
+M = -200001
+for i in range(len(f)-1):
+    s = f[i] + f[i+1]
+    if s < m:
+        c += 1
+        if s > M:
+            M = s
+
+print(c, end = '')
+print(M)
+file.close()
+#4968289
