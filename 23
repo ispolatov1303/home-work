@@ -1,0 +1,20 @@
+def f(n):
+    if n == 25:
+        return 0
+    if n > 34:
+        return 0
+    if n == 34:
+        return 1
+    return f(n+2) + f(n+5) + f(n*2)
+
+def ff(n):
+    if n == 25:
+        return 0
+    if n > 34:
+        return 0
+    if n == 34:
+        return 0
+    if n == 13:
+        return f(n+2) + f(n+5) + f(n*2)
+    return ff(n+2) + ff(n+5) + ff(n*2)
+print(ff(2))
