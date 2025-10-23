@@ -1,0 +1,16 @@
+import re
+
+file = open('24.txt')
+s = file.readline()
+file.close()
+
+p = re.findall(r'(\d+(?:\*\d+)+)', s)
+
+m = 1
+for x in p:
+    c = x.count('*') + 1
+    if c > m:
+        m = c
+
+print(m)
+#8
